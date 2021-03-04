@@ -1,0 +1,26 @@
+.footer {
+    color: gray;
+    background-color: #f4f4f4;
+    padding-top: 3em;
+    position: relative;
+    /* display: flex; */
+    bottom: 0;
+    width: 100%;
+}
+
+.footer__container {
+  padding-bottom: 3em;
+  color: #ccc;
+  font-weight: 400;
+  font-size: 1rem;
+  display: flex;
+}
+
+ul {
+  list-style: none;
+}
+/*
+Col {
+  display: flex;
+  flex: 1;
+} */
