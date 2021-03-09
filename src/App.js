@@ -28,6 +28,26 @@ function App() {
           <Header />
           <Footer />
         </Route>
+        <Route path="/tv">
+          <Header />
+          <Footer />
+        </Route>
+        <Route path="/camera">
+          <Header />
+          <Footer />
+        </Route>
+        <Route path="/smartphones">
+          <Header />
+          <Footer />
+        </Route>
+        <Route path="/headphones">
+          <Header />
+          <Footer />
+        </Route>
+        <Route path="/speakers_hometheatres">
+          <Header />
+          <Footer />
+        </Route>
       </Switch>
     </Router>
   );
