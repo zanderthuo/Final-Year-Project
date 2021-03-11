@@ -20,12 +20,6 @@ const Header = () => {
   return (
     <>
       <div className="header">
-        <div className="header__nav__menu">
-          <NavMenu
-            className="header__nav__menu__icon"
-          />
-        </div>
-
         <Link to="/">
           <img
             className="header__logo"
@@ -50,9 +44,13 @@ const Header = () => {
             <span className="header__optionLineTwo">Sign In</span>
           </div>
 
+
+
           <div className="header__optionCart">
-            <ShoppingCartIcon />
-            <span className="header__optionLineTwo header__CartCount">{cart?.length}</span>
+            <Link to="/cart">
+              <ShoppingCartIcon />
+              <span className="header__optionLineTwo header__CartCount">{cart?.length}</span>
+            </Link>
           </div>
         </div>
       </div>

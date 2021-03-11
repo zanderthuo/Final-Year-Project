@@ -101,6 +101,12 @@
   color: black;
 }
 
+.header__optionStore{
+  display: flex;
+  align-items: center;
+  color: #fff;
+}
+
 .header__CartCount{
   margin-left: 10px;
   margin-right: 10px;

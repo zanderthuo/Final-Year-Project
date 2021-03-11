@@ -2,6 +2,7 @@ import React from 'react'
 
 import Product from '../components/Product'
 import Footer from '../components/Footer'
+import Sidebar from '../components/Sidebar'
 
 import Slider from '../assets/slider.jpg'
 import CreditCard from '../assets/credit-card.png'
@@ -14,6 +15,7 @@ import '../styles/Home.css'
 const Home = () => {
   return (
     <div className="home">
+      <Sidebar />
       <div className="home__container">
         <img
           className="home__container__img"
@@ -48,8 +50,7 @@ const Home = () => {
               image="https://images-na.ssl-images-amazon.com/images/I/81O%2BGNdkzKL._AC_SX450_.jpg"
             />
         </div>
-        <hr />
-        <h3>New Productws</h3>
+
         <div className="home__row">
           <Product
               id="4903850"
@@ -111,15 +112,7 @@ const Home = () => {
                 <p>Pay with the world’s most popular and secure payment methods.</p>
               </div>
             </div>
-            <div className="feature__block">
-              <div className="feature__block__image">
-                <img src={Safety} alt="#" />
-              </div>
-              <div className="feature__block__info">
-                <h3>Shop with Confidence</h3>
-                <p>Our Buyer Protection covers your purchase from click to delivery.</p>
-              </div>
-            </div>
+
             <div className="feature__block">
               <div className="feature__block__image">
                 <img src={Telephone} alt="#" />

@@ -1,0 +1,31 @@
+.sidebar {
+    background-color: #f4f5f6;
+    padding: 25px 10px;
+    flex: 0.33;
+}
+
+ul.MuiList-root.MuiList-padding {.MuiSvgIcon-root.header__nav__menu__icon {
+    cursor: pointer;
+    left: 10px;
+    width: 50px;
+    height: 40px;
+    top: 20px;
+};
+}
+
+ul.MuiList-root.MuiList-padding {
+    text-decoration: none;
+    cursor: pointer;
+    left: 10px;
+    width: 250px;
+    height: 40px;
+    top: -40px;
+    color: black;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+a {}
