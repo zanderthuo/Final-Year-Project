@@ -1,0 +1,19 @@
+.side__navigation {
+  display: block;
+}
+
+.side__navigation__list {
+  line-height: 20px;
+  /* font-size: 1.05em; */
+  font-weight: 500;
+  cursor: pointer;
+    /* border-bottom: 1px solid transparent; */
+    /* transition: all .2s ease-in-out; */
+    color: #000;
+    font-size: 1em;
+    list-style: none;
+}
+
+.side__navigation__list > Link {
+  text-decoration: none;
+}

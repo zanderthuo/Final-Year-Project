@@ -1,3 +1,17 @@
-.shop__body {
-    display: flex;
+.shop__wrapper {
+  display: flex;
+  flex: 1;
+  top: 15px;
+}
+
+.shop__navigation {
+
+}
+
+.shop__product__list {
+  display: flex;
+  z-index: 1;
+  margin-top: 100px;
+  margin-left: 15px;
+  margin-right: 15px;
 }

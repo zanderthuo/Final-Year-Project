@@ -1,113 +1,69 @@
-.header{
-  height: 100px;
-  display: flex;
-  align-items: center;
-  background-color: #f4f4f4;
-  position: sticky;
-  top: 0;
-  z-index: 100;
+.header {
+    height: 60px;
+    display: flex;
+    align-items: center;
+    background-color: #f4f5f6;
+    position: sticky;
+    top: 0;
+    z-index: 100;
 }
 
-.header__logo{
+.header__logo {
   width: 100px;
   object-fit: contain;
   margin: 0 20px;
   margin-top: 18px;
 }
 
-.header__search{
+.header__search {
   display: flex;
-  height: 45px;
   flex: 1;
   align-items: center;
+  border-radius: 24px;
 }
 
-.header__search__container{
-  display: flex;
-  align-items: center;
-  background-color: white;
-  width: 100%;
-  height: 100%;
-  border-radius: 20px;
-}
-
-.header__search__container > input {
-  border: none;
-  outline-width: 0;
-  margin-left: 10px;
-}
-
-.home__container__img{
-  width: 100%;
-  z-index: -1;
-  margin-bottom: -150px;
-  mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
-}
-
-.header__searchInput{
+.header__searchInput {
   height: 12px;
   padding: 10px;
   border: none;
   width: 100%;
 }
 
-.header__searchIcon{
-  color: gray;
-  padding: 10px;
+.header__searchIcon {
+    padding: 5px;
+    height: 22px !important;
+    background-color: #cd9042;
 }
 
-.header__search__button {
-  color: #fff;
-  width: 50px;
-  height: 50px;
-  line-height: 50px;
-  border: none;
-  font-size: 20px;
-  border-radius: 100%;
-  cursor: pointer;
-  background: #333333;
-  -webkit-transition: all 0.3s ease 0s;
-  transition: all 0.3s ease 0s;
-  -o-transition: all 0.3s ease 0s;
+.header__optionLineOne {
+  font-size: 10px;
 }
 
-.header__avatar{}
+.header__optionLineTwo {
+  font-size: 13px;
+  font-weight: 800;
+}
 
-.header__nav{
+.header__optionBasket {
   display: flex;
- justify-content: space-evenly;
+  align-items: center;
+  color: white;
 }
 
-.header__option{
+.header__BasketCount {
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.header__nav {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.header__option {
   display: flex;
   flex-direction: column;
   margin-left: 10px;
   margin-right: 10px;
   color: black;
-}
-
-.header__optionLineOne{
-  font-size: 10px;
-}
-
-.header__optionLineTwo{
-  font-size: 13px;
-  font-weight: 800;
-}
-
-.header__optionCart{
-  display: flex;
-  align-items: center;
-  color: black;
-}
-
-.header__optionStore{
-  display: flex;
-  align-items: center;
-  color: #fff;
-}
-
-.header__CartCount{
-  margin-left: 10px;
-  margin-right: 10px;
 }
