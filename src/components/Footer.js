@@ -1,46 +1,51 @@
-import React from 'react'
-import Logo from '../assets/logo.png'
+import React from 'react';
+import '../styles/Footer.css';
 
-import LocationOnIcon from '@material-ui/icons/LocationOn';
-import PhoneIcon from '@material-ui/icons/Phone';
-import EmailIcon from '@material-ui/icons/Email';
 
-import '../styles/Footer.css'
-
-const Footer = () => {
-  return (
-    <div className="footer">
-      <div className="footer__container">
-        <div className="footer__logo" sm>
-          <img src={Logo} alt="" />
-          <br /> <br />
-          <div className="footer__contacts">
-            <ul>
-              <li>
-                <LocationOnIcon />
-                <span>  Juja, Kiambu</span>
-              </li>
-              <br />
-              <li>
-                <PhoneIcon />
-                <span>  +254711000000</span>
-              </li>
-              <br />
-              <li>
-                <EmailIcon />
-                <span>  Test@test.com</span>
-              </li>
-            </ul>
-          </div>
+const Footer = () => (
+  <footer className="footer">
+    <div className="questions">
+      <div className="questions-wrapper">
+        <div className="questions-text">
+          <h3 className="title">Questions</h3>
+          <p className="subtitle">Lorem ipsum dolor sit amet, consectetur adipiscing elit. In tempus massa ac pretium dapibus. Proin consectetur eros id suscipit tristique. </p>
         </div>
-        <br />
-      </div>
-      <hr />
-      <div className="footer__bottom">
-        <p>All rights reserved</p>
       </div>
     </div>
-  )
-}
+    <div className="support-section">
+      <div className="support-wrapper">
+        <div className="buy-from-us">
+          <h4>Buy from Us</h4>
+          <p>Women</p>
+          <p>Men</p>
+        </div>
+        <div className="online-shop">
+          <h4>Online Shop</h4>
+          <p>How to Buy</p>
+          <p>Questions</p>
+          <p>Sales</p>
+          <p>Delivery cost</p>
+          <p>Regulations</p>
+        </div>
+        <div className="about-us">
+          <h4>About Us</h4>
+          <p>Who We Are</p>
+          <p>Work with Us</p>
+          <p>Social Media</p>
+          <p>Our Stores</p>
+        </div>
+        <div className="support">
+          <h4>Support</h4>
+          <p>Contact</p>
+          <p>Find Store</p>
+          <p>Customer Service</p>
+          <p>Privacy & Cookies</p>
+          <p>Security</p>
+        </div>
+      </div>
+    </div>
+    <p className="advertising">Made with <i className="fa fa-plus"></i> by Alexander Thuo</p>
+  </footer>
+);
 
-export default Footer
+export default Footer;

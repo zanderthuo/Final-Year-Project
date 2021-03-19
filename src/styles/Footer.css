@@ -1,11 +1,86 @@
 .footer {
     color: gray;
     background-color: #f4f4f4;
-    padding-top: 3em;
+    margin-top: 2em;
     position: relative;
     /* display: flex; */
     bottom: 0;
     width: 100%;
+}
+
+.questions {
+  background: #000;
+  color: #fff;
+  text-align: center;
+  padding: 1em;
+}
+
+.questions-wrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.questions-text {
+  margin: auto;
+  max-width: 400px;
+}
+
+.title{
+  font-weight: bold;
+  font-size: 1.4em;
+}
+
+.subtitle{ font-size: .8em;}
+
+.support-section{
+  margin-top: .6em;
+  padding: 1em;
+  background: #000;
+  color: #fff;
+}
+
+.support-wrapper{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 1.4em;
+  max-width: 1200px;
+  padding: 1em calc(1em + 3vw);
+  margin: 0 auto;
+}
+
+.support-wrapper > div {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+h4 {
+  font-weight:bold;
+  font-size: .9em;
+  margin-bottom: .3em;
+}
+
+p {
+  font-size: .75em;
+  border-bottom: 1px solid transparent;
+  cursor: pointer;
+  transition: border-bottom .2s ease-in-out;
+}
+
+.buy-from-us{}
+
+.online-shop{}
+
+.about-us{}
+
+.support{
+
+}
+
+.advertising{
+  line-height: 2.4em;
+  text-align: center;
+  font-size: .9em;
 }
 
 .footer__container {
