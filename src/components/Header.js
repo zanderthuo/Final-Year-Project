@@ -67,7 +67,7 @@ function Header() {
         </div>
 
         <div className="header__optionBasket">
-          <Link to="/checkout">
+          <Link style={{textDecoration:'none', color: '#000000'}} to="/checkout">
             <ShoppingCartIcon />
             <span className="header__optionLineTwo header__BasketCount">{cart?.length}</span>
           </Link>

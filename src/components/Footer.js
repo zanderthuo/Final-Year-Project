@@ -1,5 +1,22 @@
 import React from 'react';
+import Typography from '@material-ui/core/Typography';
+import Link from '@material-ui/core/Link';
+
+
 import '../styles/Footer.css';
+
+function Copyright() {
+  return (
+    <Typography variant="body2" color="textSecondary" align="center">
+      {'Copyright © '}
+      <Link color="inherit" href="https://alexanderthuo.000webhostapp.com/">
+        Alexander Thuo
+      </Link>{' '}
+      {new Date().getFullYear()}
+      {'.'}
+    </Typography>
+  );
+}
 
 
 const Footer = () => (
@@ -44,7 +61,9 @@ const Footer = () => (
         </div>
       </div>
     </div>
-    <p className="advertising">Made with <i className="fa fa-plus"></i> by Alexander Thuo</p>
+    <span className="advertising">
+      <Copyright />
+    </span>
   </footer>
 );
 

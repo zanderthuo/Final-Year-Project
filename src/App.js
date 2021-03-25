@@ -2,11 +2,13 @@ import React, {useEffect} from 'react'
 import './App.css';
 import Header from './components/Header'
 import Footer from './components/Footer'
+import AddProduct from './components/AddProduct'
 import Home from './pages/Home'
 import Shop from './pages/Shop'
 import Checkout from './pages/Checkout'
 import Payment from './pages/Payment'
 import Login from './pages/Login'
+import SignUp from './pages/Register'
 
 import Admin from './admin/pages/Admin'
 
@@ -21,6 +23,13 @@ import { loadStripe } from '@stripe/stripe-js'
 import { Elements } from '@stripe/react-stripe-js'
 
 const promise = loadStripe('pk_test_6dhWwRSYgGmEC2b4WbYFKMxH00CanKxHVj');
+
+const routes = [
+  {
+    path: '/addProduct',
+    main: () => <AddProduct />
+  },
+];
 
 function App() {
   const[{cart}, dispatch] = useStateValue();
@@ -71,6 +80,9 @@ function App() {
           </Route>
           <Route path="/login">
             <Login />
+          </Route>
+          <Route path="/register">
+            <SignUp />
           </Route>
           <Route path="/admin">
             <Admin />

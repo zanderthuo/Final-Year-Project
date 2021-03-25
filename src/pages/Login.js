@@ -1,12 +1,62 @@
 import React, {useState} from 'react'
+import Avatar from '@material-ui/core/Avatar';
+import Button from '@material-ui/core/Button';
+import CssBaseline from '@material-ui/core/CssBaseline';
+import TextField from '@material-ui/core/TextField';
+import FormControlLabel from '@material-ui/core/FormControlLabel';
+import Checkbox from '@material-ui/core/Checkbox';
+// import Link from '@material-ui/core/Link';
+import Grid from '@material-ui/core/Grid';
+import Box from '@material-ui/core/Box';
+import LockOutlinedIcon from '@material-ui/icons/LockOutlined';
+import Typography from '@material-ui/core/Typography';
+import { makeStyles } from '@material-ui/core/styles';
+import Container from '@material-ui/core/Container';
 
-import { Link, useHistory } from 'react-router-dom'
+import { Link,useHistory } from 'react-router-dom'
 
 import { auth } from '../firebase'
 
 import '../styles/Login.css'
+import Logo from '../assets/logo.png'
+
+
+function Copyright() {
+  return (
+    <Typography variant="body2" color="textSecondary" align="center">
+      {'Copyright © '}
+      <Link color="inherit" href="https://alexanderthuo.000webhostapp.com/">
+        Alexander Thuo
+      </Link>{' '}
+      {new Date().getFullYear()}
+      {'.'}
+    </Typography>
+  );
+}
+
+const useStyles = makeStyles((theme) => ({
+  paper: {
+    marginTop: theme.spacing(8),
+    display: 'flex',
+    flexDirection: 'column',
+    alignItems: 'center',
+  },
+  avatar: {
+    margin: theme.spacing(1),
+    backgroundColor: theme.palette.secondary.main,
+  },
+  form: {
+    width: '100%', // Fix IE 11 issue.
+    marginTop: theme.spacing(1),
+  },
+  submit: {
+    margin: theme.spacing(3, 0, 2),
+  },
+}));
+
 
 const Login = () => {
+  const classes = useStyles();
   const history = useHistory();
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
@@ -20,49 +70,80 @@ const Login = () => {
         }).catch((error) => alert(error.message))
   }
 
-  const register = e => {
-    e.preventDefault();
-
-    auth.createUserWithEmailAndPassword(email, password)
-    .then((auth) => {
-      // it successfully created a new user with email and password
-      console.log(auth);
-      if (auth){
-        history.push('/')
-      }
-    }).catch(error => alert(error.message));
-    // some firebase register
-  }
 
   return (
-    <div className='login'>
-      <Link to='/'>
-        <img
-          className='login__logo'
-          src='https://upload.wikimedia.org/wikipedia/commons/thumb/a/a9/Amazon_logo.svg/1024px-Amazon_logo.svg.png'
-        />
-      </Link>
-
-      <div className='login__container'>
-        <h1>Sign In</h1>
-
-        <form>
-          <h5>Email</h5>
-          <input type="text" value={email} onChange={e => setEmail(e.target.value)} />
-
-          <h5>Password</h5>
-          <input type="password" value={password} onChange={e => setPassword(e.target.value)} />
-
-          <button type="submit" className='login__signInButton' onClick={signIn}>Sign In</button>
-        </form>
-
-        <p>
-            By signing-in you agree to the AMAZON FAKE CLONE Conditions of Use & Sale. Please
-            see our Privacy Notice, our Cookies Notice and our Interest-Based Ads Notice.
-        </p>
-
-        <button className='login__registerButton' onClick={register}>Create your Amazon Account</button>
-      </div>
+    <div className="login">
+      <Container component="main" maxWidth="xs">
+        <CssBaseline />
+        <div className={classes.paper}>
+          <Link to='/'>
+            <img
+              className='login__logo'
+              src={Logo}
+            />
+          </Link>
+          <Typography component="h1" variant="h5">
+            Sign in
+          </Typography>
+          <form className={classes.form} noValidate>
+            <TextField
+              variant="outlined"
+              margin="normal"
+              required
+              fullWidth
+              value={email}
+              onChange={e => setEmail(e.target.value)}
+              id="email"
+              label="Email Address"
+              name="email"
+              autoComplete="email"
+              autoFocus
+            />
+            <TextField
+              variant="outlined"
+              margin="normal"
+              required
+              fullWidth
+              value={password}
+              onChange={e => setPassword(e.target.value)}
+              name="password"
+              label="Password"
+              type="password"
+              id="password"
+              autoComplete="current-password"
+            />
+            <FormControlLabel
+              control={<Checkbox value="remember" color="primary" />}
+              label="Remember me"
+            />
+            <Button
+              type="submit"
+              fullWidth
+              variant="contained"
+              color="primary"
+              className={classes.submit}
+              onClick={signIn}
+            >
+              Sign In
+            </Button>
+            <Grid container>
+              <Grid item xs>
+                <Link href="#" variant="body2">
+                  Forgot password?
+                </Link>
+              </Grid>
+              <Grid item>
+                <Link to="/register" variant="body2">
+                  {"Don't have an account? Sign Up"}
+                </Link>
+              </Grid>
+            </Grid>
+          </form>
+        </div>
+        <Box mt={8}>
+          <Copyright />
+        </Box>
+      </Container>
     </div>
   )
 }
