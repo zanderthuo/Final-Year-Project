@@ -57,6 +57,7 @@ function App() {
 
   return (
     <Router>
+<<<<<<< Updated upstream
       <div className="app">
         <Switch>
           <Route exact path="/">
@@ -89,6 +90,58 @@ function App() {
           </Route>
         </Switch>
       </div>
+=======
+      <Switch>
+        <Route exact path="/">
+        <Header />
+          <Home />
+          <Footer />
+        </Route>
+        <Route path="/newHome">
+          <NewHome />
+        </Route>
+        <Route path="/auth">
+          <Header />
+          <SignIn_SignUp />
+          <Footer />
+        </Route>
+        <Route path="/payment">
+          <Header />
+          <Footer />
+        </Route>
+        <Route path="/cart">
+          <Header />
+          <Cart />
+          <Footer />
+        </Route>
+        <Route path="/shop">
+          <Header />
+          <Shop />
+          <Footer />
+        </Route>
+        <Route path="/tv">
+          <Header />
+          <Tv />
+          <Footer />
+        </Route>
+        <Route path="/camera">
+          <Header />
+          <Footer />
+        </Route>
+        <Route path="/smartphones">
+          <Header />
+          <Footer />
+        </Route>
+        <Route path="/headphones">
+          <Header />
+          <Footer />
+        </Route>
+        <Route path="/speakers_hometheatres">
+          <Header />
+          <Footer />
+        </Route>
+      </Switch>
+>>>>>>> Stashed changes
     </Router>
   );
 }
